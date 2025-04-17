@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recipe</title>
+    </head>
+<body>
+    <h1>Welcome to the Smart Recipe!</h1>
+    <p>Tell us what's left in your fridge and we'll bring you recipe!</p>
+
+    <form action="/" method="POST">
+        <label for="ingredients">Enter ingredients you have (comma-separated):</label>
+        <br>
+        <textarea id="ingredients" name="ingredients" rows="1" cols="30" required></textarea>
+        <br><br>
+        <button type="submit">Find Recipes</button>
+    </form>
+    <hr> <h2>Suggested Recipes:</h2>
+
+    {% if ingredients_received %}
+        <p>You have {{ ingredients_received }}</p>
+    {% endif %}
+
+    
+
+    
+    
+
+    
+
+    </body>
+</html>
